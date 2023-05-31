@@ -120,3 +120,23 @@ function validateHello(greetings) {
     let res =/(hello|ciao|salut|hallo|hola|ahoj|czesc)/i.test(greetings.toLowerCase());
     return res;
 }
+
+// =============== 14 Thinkful - Logic Drills: Traffic light
+function updateLight(current) { 
+    let arr = ["green", "yellow", "red"];
+    if (arr.indexOf(current) != -1 && arr.indexOf(current) != arr.length - 1) {
+        return arr[arr.indexOf(current) + 1];
+    }
+    if (arr.indexOf(current) != -1 && arr.indexOf(current) == arr.length - 1) {
+        return arr[0];
+    }
+}
+
+// =============== 15 Is he gonna survive?
+function hero(bullets, dragons){
+    if (bullets / 2 >= dragons) {
+        return true;
+    } else {
+        return false;
+    }
+}
