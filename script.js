@@ -140,3 +140,96 @@ function hero(bullets, dragons){
         return false;
     }
 }
+
+// =============== 16 Sum of positive
+function positiveSum(arr) {
+    sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            sum += arr[i];
+        }
+    }
+    return sum;
+}
+
+// =============== 17 Convert number to reversed array of digits
+function digitize(n) {
+    let arr = [];
+    if (n == 0) {
+        arr[0] = 0;
+        return arr;
+    } else if (n < 0) {
+        arr = `${n}`.split("");
+        arr.shift();
+
+    } else {
+        arr = `${n}`.split(""); 
+        arr.reverse();
+        let arrNun = [];
+        for (let i = 0; i < arr.length; i++) {
+            arrNun[i] = +arr[i];
+        } 
+        return arrNun;
+    }
+}
+
+// =============== 18 Opposite number
+function opposite(number) {
+    return -number;
+}
+
+// =============== 19 Grasshopper - Check for factor
+function checkForFactor (base, factor) {
+    if (base % factor == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// =============== 20 Returning Strings
+function greet(name){
+    return `Hello, ${name} how are you doing today?`;
+}
+
+// =============== 21 Opposites Attract
+function lovefunc(flower1, flower2){
+    if (flower1 % 2 == 0 && flower2 % 2 != 0 || flower1 % 2 != 0 && flower2 % 2 == 0) return true;
+    return false;
+}
+
+// =============== 22 Get the mean of an array
+function getAverage(marks){
+    let sum = 0;
+    for (let i = 0; i < marks.length; i++) {
+        sum += marks[i];
+    }
+    return Math.floor(sum / marks.length);
+}
+
+// =============== 23 Abbreviate a Two Word Name
+function abbrevName(name) {
+    let arr = name.split(" ");
+    return `${arr[0][0].toUpperCase()}.${arr[1][0].toUpperCase()}`;
+}
+
+// =============== 24 Count Odd Numbers below n
+function oddCount(n) {
+    // let arr = [];
+    // for (let i = 0; i < n; i++) {
+    //     if (i % 2 != 0) {
+    //         arr.push(i);
+    //     }
+    // }
+    // return arr.length;
+    return Math.floor(n / 2);
+}
+
+// =============== 25 String repeat
+function repeatStr (n, s) {
+    let str = "";
+    for (let i = 0; i < n; i++) {
+            str += s;
+    }
+    return str;
+}
