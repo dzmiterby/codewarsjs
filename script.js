@@ -233,3 +233,66 @@ function repeatStr (n, s) {
     }
     return str;
 }
+
+// =============== 26 Function 1 - hello world
+function greet() {
+    return "hello world!";
+}
+
+// =============== 27 Century From Year
+function century(year) {
+    return Math.floor(year / 100) + ((year % 100) ? 1 : 0);
+}
+
+// =============== 28 Is n divisible by x and y?
+function isDivisible(n, x, y) {
+    if (n % x == 0 && n % y == 0) return true;
+    return false;
+}
+
+// =============== 29 Reversed Strings
+function solution(str) {
+    return str.split("").reverse().join("");
+}
+
+// =============== 30 Multiply 
+function multiply(a, b) {
+    return a * b;
+}
+
+// =============== 31 Reversed Words
+function reverseWords(str) {
+    return str.split(" ").reverse().join(" ");
+}
+
+// =============== 32 Beginner Series #2 Clock
+function past(h, m, s) {
+    return h * 3600000 + m * 60000 + s * 1000;
+}
+
+// =============== 33 Powers of 2
+function powersOfTwo(n) {
+    let arr = [];
+    for (let i = 0; i <= n; i++) {
+        arr.push(2 ** i);
+    }
+    return arr;
+}
+
+// =============== 34 Beginner - Reduce but Grow
+function grow(x) {
+    let mult = 1;
+    for (let i = 0; i < x.length; i++) {
+        mult *= x[i];
+    }
+    return mult;
+}
+
+// =============== 35 Grasshopper - Summation
+var summation = function (num) {
+    let sum = 0;
+    for (let i = 1; i <= num; i++) {
+        sum += i;
+    }
+    return sum;
+}
