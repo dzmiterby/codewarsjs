@@ -296,3 +296,70 @@ var summation = function (num) {
     }
     return sum;
 }
+
+// =============== 36 You Can't Code Under Pressure #1
+function doubleInteger(i) {
+    return i * 2;
+}
+
+// =============== 37 Third Angle of a Triangle
+function otherAngle(a, b) {
+    return 180 - a - b;
+}
+
+// =============== 38 Remove First and Last Character Part Two
+function array(string) {
+    let arr = string.split(",");
+    if (arr.length < 3) {
+        return null;
+    } else {
+        arr.shift();
+        arr.pop();
+        return arr.join(" ");
+    }    
+}
+
+// =============== 39 Invert values
+function invert(array) {
+    let arrayNew = array.map((elem) => -elem);
+    return arrayNew;
+}
+
+// =============== 40 Function 2 - squaring an argument
+function square(n) {
+    return n * n;
+}
+
+// =============== 41 Removing Elements
+function removeEveryOther(arr) {
+    let arrayNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            arrayNew.push(arr[i]);
+        }
+    }
+    return arrayNew;
+}
+
+// =============== 42 Remove the time
+function shortenToDate(longDate) {
+    return longDate.split(", ")[0];
+}
+
+// =============== 43 Grasshopper - Messi goals function
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+// =============== 44 Remove First and Last Character
+function removeChar(str){
+    let arr = str.split("");
+    arr.shift();
+    arr.pop();
+    return arr.join("");
+}
+
+// =============== 45 Miles per gallon to kilometers per liter
+function converter (mpg) {
+    return +(mpg / 4.54609188 * 1.609344).toFixed(2);
+}
