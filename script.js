@@ -430,3 +430,44 @@ function alternate(n, firstValue, secondValue){
     }
     return arr;    
 }
+
+// =============== 51 If you can't sleep, just count sheep!!
+let countSheep = function (num) {
+    let str = "";
+    if (num > 0) {
+        for (let i = 0; i < num; i++) {
+            str += `${i+1} sheep...`;
+        }
+    }
+    return str;
+}
+
+// =============== 52 Calculate BMI
+function bmi(weight, height) {
+    let bmi = weight / (height * height);
+    if (bmi <= 18.5) return "Underweight";
+    if (bmi <= 25.0) return "Normal";
+    if (bmi <= 30.0) return "Overweight";
+    if (bmi > 30) return "Obese";
+}
+
+// =============== 53 Cat years, Dog years
+let humanYearsCatYearsDogYears = function(humanYears) {
+    let cat = 0;
+    let dog = 0;
+    if (humanYears == 1) dog = 15, cat = 15;
+    if (humanYears == 2) dog = 15 + 9, cat = 15 + 9;
+    if (humanYears > 2) dog = ((humanYears - 2) * 5) + 15 + 9, cat = ((humanYears - 2) * 4) + 15 + 9;
+    return [humanYears,cat,dog];
+}
+
+// =============== 54 Remove String Spaces
+function noSpace(x) {
+    let arr = x.split(" ");
+    return arr.join("");
+}
+
+// =============== 55 Chuck Norris VII - True or False? (Beginner)
+function ifChuckSaysSo() {
+    return 0 !== 0;
+}
