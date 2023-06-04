@@ -363,3 +363,70 @@ function removeChar(str){
 function converter (mpg) {
     return +(mpg / 4.54609188 * 1.609344).toFixed(2);
 }
+
+// =============== 46 Testing 1-2-3
+var number = function(array) {
+    let arrayNew = [];
+    for (let i = 0; i < array.length; i++) {
+        arrayNew.push(`${i+1}: ${array[i]}`);
+    }
+    return arrayNew;
+}
+
+// =============== 47 Sum - Square Even, Root Odd
+const sumSquareEvenRootOdd = nums => {
+    let sum = 0;
+    let arrNew = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 == 0) {
+            arrNew.push(nums[i] * nums[i]);
+        } else {
+            arrNew.push(Math.sqrt(nums[i]));
+        }
+    }
+    for (let i = 0; i < arrNew.length; i++) {
+        sum += arrNew[i];
+    }
+    return +sum.toFixed(2);
+}
+
+// =============== 48 Product of Largest Pair
+function maxProduct(a) {
+    let max1 = 0;
+    let max2 = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (max1 < a[i]) {
+            max2 = max1;
+            max1 = a[i];
+        } else if (max2 < a[i]) {
+            max2 = a[i];
+        }
+    }
+    return max1 * max2;
+}
+
+// =============== 49 Running out of space
+function spacey(array) {
+    let arrayNew = [];
+    let str = "";
+    for (let i = 0; i < array.length; i++) {
+        str += array[i];
+        arrayNew.push(str);
+    }
+    return arrayNew;
+}
+
+// =============== 50 Length and two values
+function alternate(n, firstValue, secondValue){
+    let arr = [];
+    if (n > 0) {
+        for (let i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                arr.push(firstValue);
+            } else {
+                arr.push(secondValue);
+            }
+        }
+    }
+    return arr;    
+}
