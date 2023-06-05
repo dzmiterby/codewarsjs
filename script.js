@@ -547,3 +547,98 @@ function longestRepetition(s) {
       return a;
     }, ['', 0]);
 }
+
+// =============== 61 Simple multiplication
+function simpleMultiplication(number) {
+    if (number % 2 == 0) {
+        return number * 8;
+    } else {
+        return number * 9;
+    }
+}
+
+// =============== 62 Unexpected parsing
+function getStatus(isBusy) {
+    let msg = (isBusy ? "busy" : "available");
+    let obj = {
+        status: msg,
+    };
+    return obj;
+}
+
+// =============== 63 Counting sheep
+function countSheeps(arrayOfSheep) {
+    let count = 0;
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i] === true) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// =============== 64 Power
+function numberToPower(number, power) {
+    let n = 1;
+    if (power == 0) {
+        return n;
+    }
+    for (let i = 0; i < power; i++) {
+        n *= number;
+    }
+    return n;
+}
+
+// =============== 65 All Star Code Challenge #18
+function strCount(str, letter) {  
+    let count = 0;
+    let arr = str.split("");
+    for (let i = 0; i < arr.length; i++) {
+        if (letter == arr[i]) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// =============== 66 Square(n) Sum
+function squareSum(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i] * numbers[i];
+    }
+    return sum;
+}
+
+// =============== 67 ASCII Total
+function uniTotal(string) {
+    let sum = 0;
+    for (let i = 0; i < string.length; i++) {
+        sum += string.charCodeAt(i);
+    }
+    return sum;
+}
+
+// =============== 68 Exclusive "or" (xor) Logical Operator
+function xor(a, b) {
+    return a != b;
+}
+
+// =============== 69 Even or Odd
+function evenOrOdd(number) {
+    if (number % 2 == 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+// =============== 70 Return to Sanity
+function mystery() {
+    let results = {
+        sanity: 'Hello',
+    };
+    return results;
+}
+
+console.log(mystery())
