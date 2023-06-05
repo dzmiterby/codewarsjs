@@ -471,3 +471,79 @@ function noSpace(x) {
 function ifChuckSaysSo() {
     return 0 !== 0;
 }
+
+// =============== 56 Collatz
+function collatz(n) {
+    let arr = [];
+    while (n != 1) {
+        arr.push(n);
+        if (n % 2 == 0) {
+            n = n / 2;
+        } else {
+            n = (3 * n) + 1;        
+        }
+    }
+    arr.push(1);
+    return arr.join("->");
+}
+
+// =============== 57 Ore Numbers
+function isOre(n) {
+    let arr = [];
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        if(n % i == 0) {
+            arr.push(i);
+        }
+    }
+    // for (let i = 0; i < arr.length; i++) {
+    //     sum += 1 / arr[i];
+    // }
+    // return Number.isInteger(arr.length / sum);
+    let ore = Math.round((arr.length / arr.reduce((a, b)=> a + 1 / b, 0)) * 1000) / 1000;
+    return ore == parseInt(ore);
+}
+
+// =============== 58 Two Sum
+function twoSum(numbers, target) {
+    for (let i = 0; i < numbers.length; i++) {
+        for (let k = i + 1; k < numbers.length; k++) {
+            if (numbers[i] + numbers[k] == target) {
+                return [i, k]
+            }
+        }
+    }
+}
+
+// =============== 59 Detect Pangram
+function isPangram(string) {
+    let symb = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let arr = string.split(" ").join("").split("");
+    for (let i = 0; i < arr.length; i++) {
+        for (let k = 0; k < symb.length; k++) {
+            if(arr[i].toLowerCase() == symb[k]) {
+                symb.splice(k, 1);
+            }
+        }
+    }
+    return symb.length == 0;
+}
+
+// =============== 60 Character with longest consecutive repetition
+function longestRepetition(s) {
+    let c = 0;
+    let symb = ''; 
+    return s.toLowerCase().split('').reduce((a, b) => {
+      if(b == symb) {
+        c++;
+      } else {
+        c = 1;
+      }  
+      if(c > a[1]) {
+        a[1] = c;
+        a[0] = b;
+      }  
+      symb = b;
+      return a;
+    }, ['', 0]);
+}
