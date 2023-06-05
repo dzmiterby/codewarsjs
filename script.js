@@ -641,4 +641,16 @@ function mystery() {
     return results;
 }
 
-console.log(mystery())
+// =============== 71 Scramblies
+function scramble(str1, str2) {
+    let arr1 = str1.split("");
+    let arr2 = str2.split("");
+    for (let i = 0; i < arr1.length; i++) {
+        for (let k = 0; k < arr2.length; k++) {
+            if (arr1[i] == arr2[k]) {
+                arr2.splice(k, 1);
+            }
+        }
+    }
+    return arr2.length == 0;
+}
