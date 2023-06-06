@@ -747,3 +747,105 @@ function removeExclamationMarks(s) {
 function sumStr(a, b) {
     return `${+a + +b}`;
 }
+
+// =============== 82 Basic variable assignment
+a = "code";
+b = "wa.rs";
+name = a + b;
+
+// =============== 83 String Templates - Bug Fixing #5
+function buildString(...template) {
+    return `I like ${template.join(', ')}!`;
+}
+
+// =============== 84 Switch it Up!
+function switchItUp(number) {
+    str = "";
+    switch (number) {
+        case 0: 
+            str = "Zero";
+            break;
+        case 1: 
+            str = "One";
+            break;
+        case 2: 
+            str = "Two";
+            break;
+        case 3: 
+            str = "Three";
+            break;
+        case 4: 
+            str = "Four";
+            break;
+        case 5: 
+            str = "Five";
+            break;
+        case 6: 
+            str = "Six";
+            break;
+        case 7: 
+            str = "Seven";
+            break;
+        case 8: 
+            str = "Eight";
+            break;
+        case 9: 
+            str = "Nine";
+            break;
+    }
+    return str;
+}
+
+// =============== 85 Grasshopper - Basic Function Fixer
+function addFive(num) {
+    var total = num + 5;
+    return total;
+}
+
+// =============== 86 Keep up the hoop
+function hoopCount(n) {
+    if (n >= 10) return "Great, now move on to tricks";
+    return "Keep at it until you get it";   
+}
+
+// =============== 87 Grasshopper - Messi Goals
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+// =============== 88 Are You Playing Banjo?
+function areYouPlayingBanjo(name) {
+    if (name[0] == "R" || name[0] == "r") {
+        return name + " plays banjo";
+    } else {
+        return name + " does not play banjo";
+    }
+}
+
+// =============== 89 Super Duper Easy
+function problem(x) {
+    if (typeof x == "string") {
+        return "Error";
+    } else {
+        return x * 50 + 6;
+    }
+}
+
+// =============== 90 Alan Partridge II - Apple Turnover
+function apple(x) {
+    if (+x * +x > 1000) {
+        return "It's hotter than the sun!!";
+    } else {
+        return "Help yourself to a honeycomb Yorkie for the glovebox.";
+    }
+}
+
+// =============== 91 Count the Monkeys!
+function monkeyCount(n) {
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
