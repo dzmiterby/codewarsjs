@@ -926,3 +926,66 @@ function accum(s) {
 function solution(str, ending) {
     return str.endsWith(ending);
 }
+
+// =============== 101 Basic Mathematical Operations
+function basicOp(operation, value1, value2) {
+    if (operation == '+') return value1 + value2;
+    if (operation == '-') return value1 - value2;
+    if (operation == '*') return value1 * value2;
+    if (operation == '/') return value1 / value2;
+}
+
+// =============== 102 Count of positives / sum of negatives
+function countPositivesSumNegatives(input) {
+    let sum = 0;
+    let count = 0;
+    if (input.length == 0) return [];
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] > 0) {
+            count++;
+        }
+        if (input[i] < 0) {
+            sum += input[i];
+        }
+    }
+    return [count, sum];
+}
+
+// =============== 103 You only need one - Beginner
+function check(a, x) {
+    return a.indexOf(x) != -1;
+}
+
+// =============== 104 MakeUpperCase
+function makeUpperCase(str) {
+    return str.toUpperCase();
+}
+
+// =============== 105 Return the day
+function whatday(num) { 
+    switch (num) {
+        case 1:
+            return "Sunday";
+            break;
+        case 2:
+            return "Monday";
+            break;
+        case 3:
+            return "Tuesday";
+            break;
+        case 4:
+            return "Wednesday";
+            break;
+        case 5:
+            return "Thursday";
+            break;
+        case 6:
+            return "Friday";
+            break;
+        case 7:
+            return "Saturday";
+            break;
+        default: 
+            return "Wrong, please enter a number between 1 and 7";
+    }
+}
