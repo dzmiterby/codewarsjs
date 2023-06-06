@@ -749,9 +749,9 @@ function sumStr(a, b) {
 }
 
 // =============== 82 Basic variable assignment
-a = "code";
-b = "wa.rs";
-name = a + b;
+// a = "code";
+// b = "wa.rs";
+// name = a + b;
 
 // =============== 83 String Templates - Bug Fixing #5
 function buildString(...template) {
@@ -848,4 +848,81 @@ function monkeyCount(n) {
         arr.push(i);
     }
     return arr;
+}
+
+// =============== 92 Sum of angles
+function angle(n) {
+    return 180 * (n - 2);
+}
+
+// =============== 93 Two Oldest Ages
+function twoOldestAges(ages) {
+    let max1 = 0;
+    let max2 = 0;
+    for (let i = 0; i < ages.length; i++) {
+        if (max1 < ages[i]) {
+            max2 = max1;
+            max1 = ages[i];
+        } else if (max2 < ages[i]) {
+            max2 = ages[i];
+        }
+    }
+    return [max2, max1];
+}
+
+// =============== 94 Two to One
+function longest(s1, s2) {
+    let str = s1.concat(s2);
+    let arr = str.split("");
+    let set = new Set(arr);
+    let arrNew = Array.from(set);
+    arrNew.sort();
+    return arrNew.join("");
+}
+
+// =============== 95 Sum of odd numbers
+function rowSumOddNumbers(n) {
+	return n * n * n;
+}
+
+// =============== 96 Printer Errors
+function printerError(s) {
+    return `${s.replace(/[a-m]/g, "").length}/${s.length}`;
+}
+
+// =============== 97 Vowel Count
+function getCount(str) {
+    let s = str.trim().split(" ");
+    let s1 = s.join("");
+    return s1.length - s1.replace(/[a, e, i, o, u]/g, "").length;
+}
+
+// =============== 98 Exes and Ohs
+function XO(str) {
+    let x = str.toLowerCase().replace(/[x]/g, "");
+    let o = str.toLowerCase().replace(/[o]/g, "");
+    return x.length == o.length;
+}
+
+// =============== 99 Mumbling
+function accum(s) {
+	let arr = s.split("");
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        let str = "";
+        for (let k = 0; k <= i; k++) {            
+            if (k == 0) {
+                str += arr[i].toUpperCase();
+            } else {
+                str += arr[i].toLowerCase();
+            }            
+        }
+        arrNew.push(str);
+    }
+    return arrNew.join("-");
+}
+
+// =============== 100 String ends with?
+function solution(str, ending) {
+    return str.endsWith(ending);
 }
