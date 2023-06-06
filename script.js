@@ -654,3 +654,96 @@ function scramble(str1, str2) {
     }
     return arr2.length == 0;
 }
+
+// =============== 72 Reversed sequence
+const reverseSeq = n => {
+    let arr = [];
+    for (let i = n; i > 0; i--) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// =============== 73 Jenny's secret message
+function greet(name) {
+    if(name === "Johnny") return "Hello, my love!";
+    return "Hello, " + name + "!";
+}
+
+// =============== 73 Array plus array
+function arrayPlusArray(arr1, arr2) {
+    const array = arr1.concat(arr2);
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+
+// =============== 74 Will you make it?
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    if (mpg * fuelLeft >= distanceToPump) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// =============== 75 Convert a String to a Number!
+const stringToNumber = function(str) {
+    return +str;
+}
+
+// =============== 76 altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+String.prototype.toAlternatingCase = function () {
+    return this.split("").map(a => a == a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('');
+}
+
+// =============== 77 Grasshopper - Debug sayHello
+function sayHello(name) {
+    return `Hello, ${name}`;
+}
+
+// =============== 78 Find Maximum and Minimum Values of a List
+var min = function(list) {
+    let min = list[0];
+    for (let i = 0; i < list.length; i++) {
+        if (min > list[i]) {
+            min = list[i];
+        }
+    }
+    return min;
+}
+var max = function(list) {
+    let max = list[0];
+    for (let i = 0; i < list.length; i++) {
+        if (max < list[i]) {
+            max = list[i];
+        }
+    }
+    return max;
+}
+
+// =============== 79 Enumerable Magic #4 - True for None?
+function none(arr, fun) {
+    for(let i = 0; i < arr.length; i++) {
+      if(fun(arr[i])) return false;
+    }
+    return true;
+}
+
+// =============== 80 Remove exclamation marks
+function removeExclamationMarks(s) {
+    let arr = s.split("");
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] == "!") {
+            arr.splice(i, 1);
+        }
+    }
+    return arr.join("");
+}
+
+// =============== 81 Sum The Strings
+function sumStr(a, b) {
+    return `${+a + +b}`;
+}
