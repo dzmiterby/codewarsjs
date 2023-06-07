@@ -1271,3 +1271,36 @@ function initials(n) {
     arrNew.push(arrNew1.join(""));
     return arrNew.join(".");
 }
+
+// =============== 136 Convert a Number to a String!
+function numberToString(num) {
+    return num.toString();
+}
+
+// =============== 137 Sum Mixed Array
+function sumMix(x) {
+    let sum = 0;
+    for (let i = 0; i < x.length; i++) {
+        sum += +x[i];
+    }
+    return sum;
+}
+
+// =============== 138 Hex to Decimal
+function hexToDec(hexString) {
+    return parseInt(hexString, 16);
+}
+
+// =============== 139 get character from ASCII Value
+function getChar(c) {
+    return String.fromCharCode(c);
+}
+
+// =============== 140 Is this my tail?
+function correctTail(bod, tail) {     
+    if (bod[bod.length - 1] == tail) {
+        return true;
+    } else {
+        return false;
+    }
+}
