@@ -989,3 +989,80 @@ function whatday(num) {
             return "Wrong, please enter a number between 1 and 7";
     }
 }
+
+// =============== 106 Enumerable Magic - Does My List Include This?
+function include(arr, item) {
+    return arr.indexOf(item) != -1;
+}
+
+// =============== 107 Beginner Series #4 Cockroach
+function cockroachSpeed(s) {
+    return Math.floor(s / 3.6 * 100);
+}
+
+// =============== 108 Area or Perimeter
+const areaOrPerimeter = function(l , w) {
+    if (l == w) {
+        return l * w;
+    } else {
+        return (2 * l) + (2 * w);
+    }
+}
+
+// =============== 109 Multiplication table for number
+function multiTable(number) {
+    let arr = [];
+    for (let i = 1; i <= 10; i++) {
+        let str = "";
+        str += `${i} * ${number} = ${i * number}`;
+        arr.push(str);
+    }
+    return arr.join("\n");
+}
+
+// =============== 110 Type of sum
+function typeOfSum(a, b) {
+    return typeof (a + b);
+}
+
+// =============== 111 Convert to Binary
+function toBinary(n) {
+    return +n.toString(2);
+}
+
+// =============== 112 I love you, a little , a lot, passionately ... not at all
+function howMuchILoveYou(nbPetals) {
+    let arr = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"];
+    if (nbPetals < 7) {
+        return arr[nbPetals - 1];
+    } else {
+        if (nbPetals % 6 == 0) return arr[0];
+        return arr[(nbPetals % 6) - 1];
+    }
+}
+
+// =============== 113 Convert boolean values to strings 'Yes' or 'No'.
+function boolToWord(bool) {
+    if (bool) return 'Yes';
+    return 'No';
+}
+
+// =============== 114 Switch/Case - Bug Fixing #6
+function evalObject(value) {
+    var result = 0;
+    switch(value.operation) {
+      case'+': result = value.a + value.b; break;
+      case'-': result = value.a - value.b; break;
+      case'/': result = value.a / value.b; break;
+      case'*': result = value.a * value.b; break;
+      case'%': result = value.a % value.b; break;
+      case'^': result = Math.pow(value.a, value.b);
+    }
+    return result;
+}
+
+// =============== 115 Remove duplicates from list
+function distinct(a) {
+    let set = new Set(a);
+    return Array.from(set);
+}
