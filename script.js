@@ -1162,3 +1162,112 @@ function doubleChar(str) {
     }
     return arrNew.join("");
 }  
+
+// =============== 126 Factorial
+function factorial(n) {
+    let mult = 1;
+    for (let i = 1; i <= n; i++) {
+        mult *=  i;       
+    }
+    return mult;
+}
+
+// =============== 127 Find the stray number
+function stray(numbers) {
+    let arr = numbers.sort();
+    if (arr[0] != arr[1]) {
+      return arr[0];
+    } else {
+      return arr[arr.length - 1];
+    }
+}
+
+// =============== 128 Power of two
+function isPowerOfTwo(n) {
+    return Math.log2(n) % 1 == 0 ? true : false;
+}
+
+// =============== 129 No oddities here
+function noOdds(values) {
+    let arr = [];
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] % 2 == 0) arr.push(values[i]);   
+    }
+    return arr;
+}
+
+// =============== 130 Between Extremes
+function betweenExtremes(numbers) {
+    let min = numbers[0];
+    let max = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        if (min > numbers[i]) min = numbers[i];
+        if (max < numbers[i]) max = numbers[i];   
+    }
+    return max - min;
+}
+
+// =============== 131 Sum even numbers
+function sumEvenNumbers(input) {
+    let sum = 0;
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] % 2 == 0) sum += input[i];   
+    }
+    return sum;
+}
+
+// =============== 132 How many consecutive numbers are needed?
+function consecutive(arr) {
+    arr.sort((a, b) => a - b);
+    let arrNew = [];
+    for (let i = arr[0]; i <= arr[arr.length - 1]; i++) {
+        arrNew.push(i);
+    }
+    return arrNew.length - arr.length;
+}
+
+// =============== 133 Largest Elements
+function largest(n, array) {
+    let arrNew = [];
+    array.sort((a, b) => a - b);
+    array.reverse();
+    for (let i = 0; i < n; i++) {
+        arrNew.push(array[i]);
+    }
+    return arrNew.reverse();
+}
+
+// =============== 134 Odd-Even String Sort
+function sortMyString(s) {
+    let arr = s.split("");
+    let ar1 = [];
+    let ar2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            ar1.push(arr[i]);
+        } else {
+            ar2.push(arr[i]);
+        }
+    }
+    return `${ar1.join("")} ${ar2.join("")}`
+}
+
+// =============== 135 C.Wars
+function initials(n) {
+    let arr = n.split(" ");
+    let arrNew = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+        arrNew.push(arr[i].split("")[0].toUpperCase());
+    }
+    let arr1 = arr[arr.length - 1].split("");
+    let arrNew1 = [];
+    for (let i = 0; i < arr1.length; i++) {
+        if (i == 0) {
+            arrNew1.push(arr1[i].toUpperCase());
+        } else {
+            arrNew1.push(arr1[i]);
+        }
+    }
+    arrNew.push(arrNew1.join(""));
+    return arrNew.join(".");
+}
