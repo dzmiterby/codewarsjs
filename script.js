@@ -1066,3 +1066,99 @@ function distinct(a) {
     let set = new Set(a);
     return Array.from(set);
 }
+
+// =============== 116 Grasshopper - Personalized Message
+function greet (name, owner) {
+    if (name == owner) return 'Hello boss';
+    return 	'Hello guest';
+}
+
+// =============== 117 Get Planet Name By ID
+function getPlanetName(id){
+    let name = "";
+    switch(id){
+      case 1:
+        name = 'Mercury';
+        break;
+      case 2:
+        name = 'Venus';
+        break;
+      case 3:
+        name = 'Earth';
+        break;
+      case 4:
+        name = 'Mars';
+        break;
+      case 5:
+        name = 'Jupiter';
+        break;
+      case 6:
+        name = 'Saturn';
+        break;
+      case 7:
+        name = 'Uranus';
+        break;
+      case 8:
+        name = 'Neptune';
+        break;
+    }
+    return name;
+}
+
+// =============== 118 For Twins: 1. Types
+function typeValidation(variable, type) {
+    return typeof variable == type;
+}
+
+// =============== 119 Mr. Freeze
+// Object.freeze(MrFreeze);
+
+// =============== 120 Count by X
+function countBy(x, n) {
+    let z = [];
+    for (let i = x; i <= n * x; i = i + x) {
+        z.push(i);
+    }
+    return z;
+}
+
+// =============== 121 Convert a string to an array
+function stringToArray(string) {
+    return string.split(" ");
+}
+
+// =============== 122 Bin to Decimal
+function binToDec(bin) {
+    return parseInt(bin, 2);
+}
+
+// =============== 123 What is between?
+function between(a, b) {
+    let arr = [];
+    for (let i = a; i <= b; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// =============== 124 Find numbers which are divisible by given number
+function divisibleBy(numbers, divisor) {
+    let arr = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % divisor == 0) {
+            arr.push(numbers[i]);
+        }        
+    }
+    return arr;
+}
+
+// =============== 125 Double Char
+function doubleChar(str) {
+    let arr = str.split("");
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrNew.push(arr[i]);
+        arrNew.push(arr[i]);        
+    }
+    return arrNew.join("");
+}  
