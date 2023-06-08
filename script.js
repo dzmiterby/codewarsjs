@@ -1397,3 +1397,92 @@ function defineSuit(card) {
        default: return 'spades';
     }
 }
+
+// =============== 151 Stringy Strings
+function stringy(size) {
+    let str = "";  
+    for (let i = 0; i < size; i++) {
+        if (i % 2 == 0) {
+            str += 1;
+        } else {
+            str += 0;
+        }
+    }
+    return str;
+}
+
+// =============== 152 Lario and Muigi Pipe Problem
+function pipeFix(numbers) {
+    let arr = [];
+    for (let i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// =============== 153 USD => CNY
+function usdcny(usd) {
+    return `${(usd * 6.75).toFixed(2)} Chinese Yuan`;
+}
+
+// =============== 154 Sentence Smash
+function smash(words) {
+    return words.join(" ");
+}
+
+// =============== 154 Hello, Name or World!
+function hello(name) {
+    if (name) { 
+        return "Hello, " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + '!';
+    } else {
+        return "Hello, World!";
+    }
+}
+
+// =============== 155 Sum of Multiples
+function sumMul(n,m) {
+    sum = 0;
+    if (m > n) {
+        for (let i = n; i <= m; i++) {
+            if (i % n == 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    } else {
+        return "INVALID";
+    }
+}
+
+// =============== 156 A Needle in the Haystack
+function findNeedle(haystack) {
+    return `found the needle at position ${haystack.indexOf("needle")}`;
+}
+
+// =============== 157 Ensure question
+function ensureQuestion(s) {
+    if (s[s.length - 1] == "?") {
+        return s;
+    } else {
+        return s + "?";
+    }
+}
+
+// =============== 158 Grasshopper - Function syntax debugging
+function main(verb, noun) {
+  return verb + noun;
+}
+
+// =============== 159 Incorrect division method
+const solve = (x, y) => x / y;
+
+// =============== 160 Are arrow functions odd?
+function odds(values) {
+    let arr = [];
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] % 2 != 0) {
+            arr.push(values[i]);
+        }
+    }
+    return arr;
+}
