@@ -1529,6 +1529,54 @@ function nerdify(txt) {
 }
 
 // =============== 165 Greet Me
-let greet = function(n) {
-    return 'Hello ' + n.slice(0, 1).toUpperCase() + n.slice(1).toLowerCase() + '!';
+// let greet = function(n) {
+//     return 'Hello ' + n.slice(0, 1).toUpperCase() + n.slice(1).toLowerCase() + '!';
+// }
+
+// =============== 166 SpeedCode #2 - Array Madness
+function arrayMadness(a, b) {
+    let s1 = 0;
+    let s2 = 0;
+    for (let i = 0; i < a.length; i++) {
+        s1 += Math.pow(a[i], 2);
+    }
+    for (let i = 0; i < b.length; i++) {
+        s2 += Math.pow(b[i], 3);
+    }
+    return s1 > s2;
+}
+
+// =============== 167 Find the Difference in Age between Oldest and Youngest Family Members
+function differenceInAges(ages) {
+    let arr = ages.sort((a, b) => a - b);
+    return [arr[0], arr[arr.length - 1], (arr[arr.length - 1] - arr[0])];
+}
+
+
+// =============== 168 get ascii value of character
+function getASCII(c) {
+    return c.charCodeAt(0);
+}
+
+// =============== 169 Triple Trouble
+function tripleTrouble(one, two, three) {
+    let str = "";
+    let c = 0;
+    while (c < one.length) {
+        str += one[0 + c];
+        str += two[0 + c];
+        str += three[0 + c];
+        c++;
+    }
+    return str;
+}
+
+// =============== 170 Grasshopper - Terminal game combat function
+function combat(health, damage) {
+    let a = health - damage;
+    if (a < 0) {
+        return 0;
+    } else {
+        return a;
+    }
 }
