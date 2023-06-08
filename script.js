@@ -1486,3 +1486,49 @@ function odds(values) {
     }
     return arr;
 }
+
+// =============== 161 Divide and Conquer
+function divCon(x) {
+    let s1 = 0;
+    let s2 = 0;
+    for (let i = 0; i < x.length; i++) {
+        if ( typeof x[i] == "number") {
+            s1 += x[i];
+        } else {
+            s2 += +x[i];
+        }
+    }
+    return s1 - s2;
+}
+
+// =============== 162 Palindromes Here and There
+function convertPalindromes(numbers) {
+    let arr = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (`${numbers[i]}` == `${numbers[i]}`.split("").reverse().join("")) {
+            arr.push(1);
+        } else {
+            arr.push(0);
+        }
+    }
+    return arr;
+}
+
+// =============== 163 Heron's formula
+function heron(a, b, c) {
+    let s = (a + b + c) / 2;
+    return +Math.sqrt(s * (s - a) * (s - b) * (s - c)).toFixed(2);
+}
+
+// =============== 164 Ch4113ng3
+function nerdify(txt) {
+    txt=txt.replace(/a|A/g,'4');
+    txt=txt.replace(/e|E/g,'3');
+    txt=txt.replace(/l/g,'1');
+    return txt;
+}
+
+// =============== 165 Greet Me
+let greet = function(n) {
+    return 'Hello ' + n.slice(0, 1).toUpperCase() + n.slice(1).toLowerCase() + '!';
+}
