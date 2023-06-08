@@ -1304,3 +1304,96 @@ function correctTail(bod, tail) {
         return false;
     }
 }
+
+// =============== 141 Merge two sorted arrays into one
+function mergeArrays(arr1, arr2) {
+    let arr = arr1.concat(arr2);
+    let set = new Set(arr.sort((a, b) => a - b));
+    return Array.from(set);
+}
+
+// =============== 142 Fake Binary
+function fakeBin(x) {
+    let arr = x.split("");
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 5) {
+            arrNew.push(0);
+        } else {
+            arrNew.push(1);
+        }
+    }
+    return arrNew.join("");
+}
+
+// =============== 143 Find the smallest integer in the array
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        let min = args[0];
+        for (let i = 0; i < args.length; i++) {
+            if (min > args[i]) {
+                min = args[i];
+            }
+        }
+        return min;
+    }
+}
+
+// =============== 144 Capitalization and Mutability
+function capitalizeWord(word) {
+    let newStr = word[0].toUpperCase() + word.slice(1); 
+    return newStr;
+}
+
+// =============== 145 Well of Ideas - Easy Version
+function well(x) {
+    let count = 0;
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] == 'good') count++;
+    }
+    if (count == 0) {
+        return 'Fail!';
+    } else if (count == 1) {
+        return 'Publish!';
+    } else if (count > 1) {
+        return 'I smell a series!';
+    }
+}
+
+// =============== 146 FIXME: Replace all dots
+let replaceDots = function(str) {
+    return str.split(".").join("-");
+}
+
+// =============== 147 Find the position!
+function position(letter) {
+    let symb = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    return `Position of alphabet: ${symb.indexOf(letter) + 1}`;
+}
+
+// =============== 148 Sum without highest and lowest number
+function sumArray(array) {
+    if (array == null || array.length < 2) return 0;
+    array.sort((a, b) => a - b);
+    let sum = 0;
+    for (let i = 1; i < array.length - 1; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+
+// =============== 149 Reverse List Order
+function reverseList(list) {
+    return list.reverse();
+}
+
+// =============== 150 Define a card suit
+function defineSuit(card) {
+    let s = card.substr(-1);
+    switch(s) {
+       case '♣': return 'clubs';
+       case '♦': return 'diamonds';
+       case '♥': return 'hearts';
+       default: return 'spades';
+    }
+}
