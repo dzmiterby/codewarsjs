@@ -1751,3 +1751,62 @@ function sumOfMinimums(arr) {
 function sumOfIntegersInString(s){
     return s.split(/([^0-9])/g).map(x => parseInt(x)).filter(Boolean).reduce((acc, el) => acc + el, 0)
 }
+
+// =============== 191 Debug Sum of Digits of a Number
+function getSumOfDigits(integer) {
+    let sum = 0;
+    let str = "" + integer;
+    let arr = str.split("");
+    for (let i = 0; i < arr.length; i++) {
+        sum += +arr[i];
+    }
+    return sum;
+}
+
+// =============== 192 Beginner Series #3 Sum of Numbers
+function getSum(a, b) {
+    let sum = 0;
+    let i1;
+    let i2;
+    if (a < b) {
+        i1 = a;
+        i2 = b;     
+    } else {
+        i1 = b;
+        i2 = a;
+    }
+    for (let i = i1; i <= i2; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+// =============== 193 Dictionary from two lists
+function createDict(keys, values) {
+    let obj = {};
+    for (let i = 0; i < keys.length; i++) {
+        if (values[i] != undefined) {
+            obj[keys[i]] = values[i];
+        } else {
+            obj[keys[i]] = null;
+        }
+    }
+    return obj;
+}
+
+// =============== 194 Powers of i
+function pofi(n) {
+    return ["1","i","-1","-i"][n % 4];
+}
+
+// =============== 195 Shortest Word
+function findShort(s) {
+    let arr = s.split(" ");
+    let min = arr[0].length;
+    for (let i = 0; i < arr.length; i++) {
+        if (min > arr[i].length) {
+            min = arr[i].length;
+        }
+    }
+    return min;
+}
