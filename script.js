@@ -1688,11 +1688,11 @@ function arithmeticSequenceElements(a, d, n) {
 }
 
 // =============== 184 Fix string case
-function solve(s){
-    let up=s.split('').filter(v=>v.match(/[A-Z]/)).length
-    let down=s.split('').filter(v=>v.match(/[a-z]/)).length
-    return down>=up?s.toLowerCase():s.toUpperCase();
-}
+// function solve(s) {
+//     let up=s.split('').filter(v=>v.match(/[A-Z]/)).length
+//     let down=s.split('').filter(v=>v.match(/[a-z]/)).length
+//     return down>=up?s.toLowerCase():s.toUpperCase();
+// }
 
 // =============== 185 Geometric Progression Sequence
 function geometricSequenceElements(a, r, n) {
@@ -1704,4 +1704,50 @@ function geometricSequenceElements(a, r, n) {
         arr.push(out);
     }
     return arr.join(", ");
+}
+
+// =============== 186 Reverse words
+function reverseWords(str) {
+    // return str.split(" ").reverse().join(" ");
+    let arr = str.split(" ");
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrNew.push(arr[i].split("").reverse().join(""));
+    }
+    return arrNew.join(" ");
+}
+
+// =============== 187 Descending Order
+function descendingOrder(n) {
+    let str = "" + n;
+    let ar = str.split("");
+    let arr = ar.sort((a, b) => a - b);
+    return +arr.reverse().join("");
+}
+
+// =============== 188 Count consonants
+function consonantCount(str) {
+    let s = /[a, e, i, o, u]/gi;
+    let strNew = str.match(s);
+    return str.length - strNew.length;
+}
+
+// =============== 189 Sum of Minimums!
+function sumOfMinimums(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let min = arr[i][0];
+        for (let k = 0; k < arr[i].length; k++) {
+            if (min > arr[i][k]) {
+                min = arr[i][k];
+            }
+        }
+        sum += min;
+    }
+    return sum;
+}
+
+// =============== 190 Sum of integers in string
+function sumOfIntegersInString(s){
+    return s.split(/([^0-9])/g).map(x => parseInt(x)).filter(Boolean).reduce((acc, el) => acc + el, 0)
 }
