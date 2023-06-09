@@ -1638,3 +1638,70 @@ Math.roundTo = function(number, precision) {
 function orderOperations() {
     return (2 + 2) * (2 + 2) * 2;
 }
+
+// =============== 181 draw me a chessboard
+function chessBoard(rows, columns) {
+    let arr = [];
+    for (let i = 0; i < rows; i++) {
+        let ar = [];
+        for (let k = i; k < columns + i; k++) {
+            if (k % 2 == 0) {
+                ar.push("O");
+            } else {
+                ar.push("X");
+            }
+        }
+        arr.push(ar);
+    }
+    return arr;
+}
+
+// =============== 182 Ciphers #1 - The 01 Cipher
+function encode(plaintext) {
+    let symb = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let arr = plaintext.split("");
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (symb.indexOf(arr[i].toLowerCase()) != -1) {
+            if (symb.indexOf(arr[i].toLowerCase()) % 2 == 0) {
+                arrNew.push("0");
+            } else {
+                arrNew.push("1");
+            }
+        } else {
+            arrNew.push(arr[i]);
+        }
+    }
+    return arrNew.join("");
+}
+
+// =============== 183 Arithmetic progression
+function arithmeticSequenceElements(a, d, n) {
+	let arr = [];
+    let out = a;
+    arr.push(out);
+    for (let i = 1; i < n; i++) {
+        out += d;
+        arr.push(out);
+    }
+    return arr.join(", ");
+}
+
+// =============== 184 Fix string case
+function solve(s){
+    let up=s.split('').filter(v=>v.match(/[A-Z]/)).length
+    let down=s.split('').filter(v=>v.match(/[a-z]/)).length
+    return down>=up?s.toLowerCase():s.toUpperCase();
+}
+
+// =============== 185 Geometric Progression Sequence
+function geometricSequenceElements(a, r, n) {
+    let arr = [];
+    let out = a;
+    arr.push(out);
+    for (let i = 1; i < n; i++) {
+        out *= r;
+        arr.push(out);
+    }
+    return arr.join(", ");
+}
