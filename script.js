@@ -1580,3 +1580,36 @@ function combat(health, damage) {
         return a;
     }
 }
+
+// =============== 171 easy logs
+
+function logs(x , a, b) {
+    return (Math.log(a*b) / Math.log(x));
+}
+
+// =============== 172 Reversing Words in a String
+function reverse(string) {
+    return string.split(" ").reverse().join(" ");
+}
+
+// =============== 173 Get number from string
+function getNumberFromString(s) {
+    let i = /[0-9]/g;
+    return +s.match(i).join("");
+}
+
+// =============== 174 validate code with simple regex
+function validateCode(code) {
+    let str = "" + code;
+    let arr = str.split("");
+    if (+arr[0] == 1 || +arr[0] == 2 || +arr[0] == 3) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// =============== 175 Simple Comparison?
+function add(a, b) {
+	return +a == +b;
+}
