@@ -1613,3 +1613,28 @@ function validateCode(code) {
 function add(a, b) {
 	return +a == +b;
 }
+
+// =============== 176 Grasshopper - Combine strings
+function combineNames(a, b) {
+    return a + " " + b;
+}
+
+// =============== 177 Formatting decimal places #0
+function twoDecimalPlaces(n) {
+    return +n.toFixed(2);
+}
+
+// =============== 178 Printing Array elements with Comma delimiters
+function printArray(array) {
+    return array.join(",");
+}
+
+// =============== 179 Improving Math.round(x)
+Math.roundTo = function(number, precision) {
+    return number.toFixed(precision);
+}
+
+// =============== 180 Grasshopper - Order of operations
+function orderOperations() {
+    return (2 + 2) * (2 + 2) * 2;
+}
