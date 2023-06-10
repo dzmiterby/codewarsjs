@@ -1830,3 +1830,21 @@ function greet_ben() {
   name = 'Ben'; 
   return "Hello, " + name + '!';
 }
+
+// =============== 198 Highest and Lowest
+function highAndLow(numbers) {
+    let ar = numbers.split(" ");
+    let arr = ar.sort((a, b) => a - b);
+    return `${arr[arr.length - 1]} ${arr[0]}`;
+}
+
+// =============== 199 List Filtering
+function filter_list(l) {
+    let ar = [];
+    for (let i = 0; i < l.length; i++) {
+        if (typeof l[i] == "number") {
+            ar.push(l[i]);
+        }
+    }
+    return ar;
+}
