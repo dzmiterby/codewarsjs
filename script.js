@@ -1854,3 +1854,9 @@ function isLeapYear(year) {
     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) return true;
     return false;
 }
+
+// =============== 201 Sort Numbers
+function solution(nums) {
+    if (nums == null) return [];
+    return nums.sort((a, b) => a - b);
+}
