@@ -1810,3 +1810,23 @@ function findShort(s) {
     }
     return min;
 }
+
+// =============== 196 Grasshopper - Array Mean
+// let findAverage = function(nums) {
+//     let sum = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         sum += nums[i];
+//     }
+//     return sum / nums.length;
+// }
+
+// =============== 197 Shifty Closures
+var name;
+function greet_abe() {
+  name = 'Abe';
+  return "Hello, " + name + '!';
+} 
+function greet_ben() {
+  name = 'Ben'; 
+  return "Hello, " + name + '!';
+}
