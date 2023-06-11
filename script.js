@@ -1860,3 +1860,8 @@ function solution(nums) {
     if (nums == null) return [];
     return nums.sort((a, b) => a - b);
 }
+
+// =============== 202 5 without numbers !!
+function unusualFive() {
+    return "abcde".length;
+}
