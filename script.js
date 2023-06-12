@@ -1896,3 +1896,12 @@ function multipleOfIndex(array) {
     }
     return ar;
 }
+
+// =============== 206 Contamination #1 -String-
+function contamination(text, char) {
+    let str = "";
+    for (let i = 0; i < text.length; i++) {
+        str += char;
+    }
+    return str;
+}
