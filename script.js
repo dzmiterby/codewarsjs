@@ -1885,3 +1885,14 @@ function makeNegative(num) {
         return num;
     }
 }
+
+// =============== 205 Multiple of index
+function multipleOfIndex(array) {
+    let ar = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % i == 0) {
+            ar.push(array[i]);
+        }
+    }
+    return ar;
+}
