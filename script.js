@@ -1905,3 +1905,20 @@ function contamination(text, char) {
     }
     return str;
 }
+
+// =============== 207 Vowel remover
+function shortcut (string) {
+    return string.split(/[aeiou]/g).join('')
+}
+
+// =============== 208 Add Length
+function addLength(str) {
+    let ar = str.split(" ");
+    let arr = [];
+    for (let i = 0; i < ar.length; i++) {
+        let str = "";
+        str += `${ar[i]} ${ar[i].length}`;
+        arr.push(str);
+    }
+    return arr;
+}
